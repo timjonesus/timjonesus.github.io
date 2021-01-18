@@ -1,25 +1,62 @@
 html {
-	background: #f2f2f2;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	background: #fff;
+	line-height: 160% !important;
+	font-family: "Avenir",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
 }
 
+body {
+	margin: 3em;
+	margin-top: -1em;
+}
+
+strong {
+	font-weight: bold;
+	line-height: 140%;
+}
 h1,h2, h3 {
+	font-weight: 700;
+	line-height: 100%;
 	#subtitle {
-		clear: left;
+
 		color: #999;
 		display: flex;
 		font-weight: 300;
 	}
 }
+h1 {
+	font-size: 32px;
+	margin-top: 50px;
+}
+h2 {
+	font-size: 24px;
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+h3 {
+	margin-top: 12px;
+	line-height: 140%;
+}
 
 div {
 	display: block;
 }
+
+p {
+	margin: 0 0 20px;
+	line-height: 160%;
+}
+
 p,li {
-	line-height: 140%;
+	line-height: 150%;
+}
+ul,li {
+	list-style: inherit;
+	margin-left: 0em;
 }
 #header,.block {
-	width: 850px;
+	width: 800px;
 	margin: 0 auto;
 	overflow: auto;
 }
@@ -30,37 +67,78 @@ p,li {
 
 .block {	
 	display: block;
-	margin-top: 20px;
 		
 }
+.overview {
+	width: 90%;
+}
 .experience {
-	border-right: 1px solid #ccc;
+	border-right: 0px solid #ccc;
 	padding-right: 30px;
 	width: 60%;
 	margin-right: 30px;
 	float: left;
+	margin-top: -2em;
+	margin-bottom: 2em;
+	p {
+		margin-bottom: 0;
+	}
+	ul,li {
+		list-style: inherit;
+		margin-left: 1em;
+	}
 }	
 .education {
 	float: left;
 	width: 30%;
+	margin-top: -2em;
+	page-break-after: always;
 }
 .recommendations {
+	margin-top: 80px;
 	clear: left;
-	
+	page-break-after: always;
+	h2 {
+		margin-top: 4em;
+	}
+
 	.item {
 		display: block;
 		margin-right: 40px;
 		float: left;
-		
 		p {
-			float: right;
+			float: left;
 			width: 60%;
 		}
 		.person {
-			float: left;
+			float: right;
 			width: 30%;
-			font-size: 80%;
+// 			font-size: 80%;
 		}
+	}
+}
+.portfolio {
+	h2 {
+		clear: left;
+	}
+		p {
+			float: left;
+			width: 60%;
+		}
+		
+	.item {
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid; /* or 'auto' */		display: block;
+    .details li:first-child {
+	    font-weight: bold;
+    }
+	img {
+		max-width: 750px;
+		margin-top: 1em;
+		margin-bottom: 2em;
+		display: block;
+	}
 	}
 }
 
@@ -69,8 +147,11 @@ ul.contact {
 	clear: both; 
 	list-style: none;
 	padding: 0;
+	margin: 10px 0 20px;
 	
 	li {
 		float: left;
+		margin-right: 2em;
+		margin-left: 0;
 	}
 }
